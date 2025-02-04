@@ -12,12 +12,12 @@ categories = ["embedded", "hardware-support", "no-std"]
 
 [dependencies]
 embedded-hal = { version = "0.2", features = ["unproven"] }
-esp8266      = { version = "0.6", path = "./esp8266" }
+esp8266      = { version = "0.7", path = "./esp8266" }
 nb           = "1.0"
 paste        = { version = "1.0", optional = true }
 void         = { version = "1.0", default-features = false }
-xtensa-lx    = { version = "0.7", features = ["esp8266"] }
-xtensa-lx-rt = { version = "0.12", features = ["esp8266"], optional = true }
+xtensa-lx    = { version = "0.8", features = ["esp8266"] }
+xtensa-lx-rt = { version = "0.16", path = "./xtensa-lx-rt", features = ["esp8266"], optional = true }
 
 [dependencies.esp8266-hal-proc-macros]
 path    = "procmacros"
@@ -36,7 +36,7 @@ rt        = ["xtensa-lx-rt"]
 all_in_ram = []
 
 [profile.dev]
-lto       = true
+lto       = false
 opt-level = 1
 
 # Workaround for linker errors when using lto with the dev profile:

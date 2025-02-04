@@ -10,7 +10,7 @@
 pub use crate::efuse::DPortExt;
 pub use crate::flash::SPI0Ext;
 pub use crate::gpio::GpioExt;
-pub use crate::rng::RngExt;
+pub use crate::rng::Rng;
 pub use crate::rtccntl::RtcControlExt;
 pub use crate::spi::SPIExt;
 pub use crate::time::U32Ext;
