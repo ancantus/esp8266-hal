@@ -30,6 +30,7 @@ panic-halt = "0.2"
 default   = ["interrupt", "rt"]
 interrupt = ["paste"]
 rt        = ["xtensa-lx-rt"]
+critical-section = [ "esp8266/critical-section" ]
 
 # Place program completely in RAM (needed when e.g. using only ROM bootloader,
 # or for debugging).
